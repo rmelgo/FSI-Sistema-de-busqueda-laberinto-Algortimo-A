@@ -4,7 +4,7 @@
 
 # - Introducción
 
-Proyecto realizado en la asignatura de Fundamentos de Sistemas Inteligentes del grado de Ingenieria Informática de la Universidad de Salamanca. El enunciado del proyecto se encuentra subido en el repositorio en un archivo PDF llamado <a href="https://github.com/rmelgo/FSI-Sistema-de-busqueda-laberinto-backtrack/blob/main/Pra%CC%81cticaBu%CC%81squedaLaberinto.pdf" target="_blank">*PrácticaBúsquedaLaberinto.pdf*</a>.
+Proyecto realizado en la asignatura de ***Fundamentos de Sistemas Inteligentes*** del grado de Ingenieria Informática de la Universidad de Salamanca. El enunciado del proyecto se encuentra subido en el repositorio en un archivo PDF llamado <a href="https://github.com/rmelgo/FSI-Sistema-de-busqueda-laberinto-backtrack/blob/main/Pra%CC%81cticaBu%CC%81squedaLaberinto.pdf" target="_blank">*PrácticaBúsquedaLaberinto.pdf*</a>.
 
 El principal objetivo de este proyecto es la realización de un programa que implemente el algoritmo A* para que un robot pueda resolver un laberinto. 
 
@@ -13,13 +13,13 @@ Especificaciones básicas del problema:
 - El robot cuenta con un sensor de posición que permite saber en que posición del laberinto se encuentra y un sensor de choque que permite detectar las paredes del laberinto.
 - El robot unicamente cuenta con movimiento de avance y giro de 90 grados hacia derecha e izquierda.
 
-Para implementar el algoritmo A*, se ha utilizado el lenguaje C ya que son necesarias ciertas estructuras de datos como colas, listas enlazadas y arboles las cuales ya han sido implementadas previamente.
+Para implementar el algoritmo A*, se ha utilizado el lenguaje C ya que son necesarias ciertas estructuras de datos como colas, listas enlazadas y árboles las cuales ya han sido implementadas previamente.
 
 # - Comentarios sobre el entorno de ejecución
 
 Para ejecutar este programa, se requerirá de una distribución del Sistema Operativo **GNU/Linux**, aunque también se puede ejecutar en **Windows**.    
 
-Para poder compilar correctamente el programa, se deberá tener instalada una version del compilador gcc o similar. En el caso de no tener gcc, se puede instalar facilmente con el siguiente comando:
+Para poder compilar correctamente el programa, se deberá tener instalada una versión del compilador gcc o similar. En el caso de no tener gcc, se puede instalar fácilmente con el siguiente comando:
 
 ```sudo apt install gcc```
 
@@ -43,9 +43,9 @@ La diferencia radica en que el *algorirtmo A** utiliza una heurística admisible
 
 Una **heurística admisible** es aquella que no sobreestima el esfuerzo necesario para llegar a la solución óptima.
 
-De esta manera, la implementación de un *algoritmo A* garantiza la obtención de la solución optima mientras que implementación de un *algortimo A** no garantiza dar con la solución óptima.
+De esta manera, la implementación de un *algoritmo A* garantiza la obtención de la solución óptima mientras que implementación de un *algortimo A** no garantiza dar con la solución óptima.
 
-En el caso particular de este problema, una heuristica admisible es la utilización de la ***distancia Manhattan***. La distancia Manhattan se calcula sumando la diferencia en valor absoluto de componente x del estado actual y el final más la diferencia en valor absoluto de componente y del estado actual y el final. 
+En el caso particular de este problema, una heurística admisible es la utilización de la ***distancia Manhattan***. La distancia Manhattan se calcula sumando la diferencia en valor absoluto de componente x del estado actual y el final más la diferencia en valor absoluto de componente y del estado actual y el final. 
 
 ![heuristica](https://github.com/rmelgo/FSI-Sistema-de-busqueda-laberinto-Algortimo-A/assets/145989723/b41acff0-b0ad-40e4-8378-96c1c76148a2)
 
@@ -96,12 +96,18 @@ El recorrido obtenido que debe seguir el robot para alcanzar la salida del laber
 ![Ejemplo ejecucion 4](https://github.com/rmelgo/FSI-Sistema-de-busqueda-laberinto-Algortimo-A/assets/145989723/954fa479-dc0d-4731-a060-2bc0a886c020)
 
 Como se puede observar, se han explorado 133 hasta encontrar la solución del laberinto. Al utilizar una implementación del *algortimo A* con una heurística no admisible, la solución obtenida no se puede garantizar que es óptima. 
-De hecho en este caso se ha modificado la heurística intencionadamente para priorizar la búsqueda por la parte superior y encontrar una solución no óptima.
+De hecho, en este caso, se ha modificado la heurística intencionadamente para priorizar la búsqueda por la parte superior y encontrar una solución no óptima.
 
 # Conclusiones y resultados
 
-El laberinto cuenta con 6 casillas de altura y 7 casillas de ancura lo que proporciona un total de 42 casillas. Cada casilla cuenta con 4 orientaciones posibles por lo que existen 4x7x6=168 estados distintos.
+El laberinto cuenta con 6 casillas de altura y 7 casillas de anchura lo que proporciona un total de 42 casillas. Cada casilla cuenta con 4 orientaciones posibles por lo que existen 4x7x6=168 estados distintos.
 
 De esta manera, la implementación del *algortimo A** necesito explorar 97 estados para encontrar la solución mientras que la implementación del *algortimo A* necesito explorar 133 para encontrar la solución.
 
 Se puede observar como implementación del *algortimo A** necesita explorar una **menor** cantidad de estados que el *algortimo A* y además de garantizar que la solución encontrada es óptima.
+
+# - Participantes
+
+<table>
+  <td align="center"><a href="https://github.com/rmelgo"><img src="https://avatars.githubusercontent.com/u/145989723?s=400&u=e5c06adba3f3c418207178abc845d398b3d5f77f&v=4" width="100px;" alt=""/><br /><sub><b>Raúl Melgosa</b></sub></a><br/> 
+</table>
